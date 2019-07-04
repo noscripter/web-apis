@@ -13,7 +13,9 @@
     "lint": "gulp lint",
     "rebuild": "npm run deps && gulp build",
     "build": "gulp build",
-    "deploy": "node serve.js"
+    "deploy": "node serve.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -39,7 +41,8 @@
     "object-graph-js": "git://github.com/mdittmer/object-graph-js.git",
     "webidl2": "^2.0.11",
     "webidl2-js": "git://github.com/mdittmer/webidl2-js.git",
-    "ya-stdlib-js": "git://github.com/mdittmer/ya-stdlib-js.git"
+    "ya-stdlib-js": "git://github.com/mdittmer/ya-stdlib-js.git",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
@@ -57,5 +60,6 @@
   },
   "eslintConfig": {
     "extends": "google"
-  }
+  },
+  "snyk": true
 }
